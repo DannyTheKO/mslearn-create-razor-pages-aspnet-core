@@ -5,6 +5,9 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// This code registers the PizzaService class with the dependency injection container.
+builder.Services.AddScoped<PizzaService>();
+
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddDbContext<PizzaContext>(options =>
